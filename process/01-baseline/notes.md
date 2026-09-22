@@ -24,7 +24,7 @@
 
 Fact check against my résumé (done by Claude, for me to confirm): every name, date and number on the page matches the résumé. Two things it assumed:
 
-- It calls "Que Planes?" a team project ("Our team took first place… out of seven teams"). The résumé doesn't say it was a team.
+- It calls "Que Planes?" a team project ("Our team took first place… out of seven teams"). The résumé doesn't say it was a team, and it wasn't: I confirmed it was a solo project.
 - The contact section says "Email is the fastest way to reach me" and offers to talk in Portuguese. I never said either, and my Portuguese is listed as conversational.
 
 ## Files in this folder
