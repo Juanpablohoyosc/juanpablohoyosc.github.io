@@ -1,9 +1,9 @@
 # Status
 
-- Phase: 3 done except the outside review. The site is live at https://juanpablohoyosc.github.io
+- Phase: 4 drafted. The site and links page are live at https://juanpablohoyosc.github.io
 - Done: links page, contact card (.vcf), QR code, 404 page, review round and fixes; baseline (`01-baseline/`); Phase 1 documents (`02-direction/`: teardown, content strategy, directions, refined prompt); v1 of `index.html` with styles, self-hosted fonts, favicon, link-preview image and the résumé download; screenshots in `screenshots/`
 - The repository already existed with my September 3 page in it. That page moved to `00-earlier-version/` unedited, and the new work sits on top of its history, so the site tells the story first attempt → baseline → refined build.
-- Next: the tool comparison (`03-comparisons/`), an outside review (`04-feedback/cross-tool-review-prompt.md`), then the Loom outline, reflection and Notion page (`05-submission/`)
+- Next, and all mine to do: run the refined prompt in two more tools (`03-comparisons/`), record the Loom from `05-submission/loom-outline.md`, finish the [ME] parts of `05-submission/reflection.md`, then paste `05-submission/notion-submission.md` into Notion, publish it and submit the link on Blackboard. `05-submission/rubric-check.md` tracks what's left.
 - How we're working: Claude (Cowork) runs the brief and uses its best judgment through to the end, then we review everything and fix. My laptop is back, so GitHub and the Loom are unblocked.
 
 ## Settled in Phase 0
