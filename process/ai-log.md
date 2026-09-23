@@ -54,6 +54,6 @@ Every AI interaction that shaped a decision. My course asks for the tool, why I 
 - Date: September 23, 2026
 - Tool and model: Gemini
 - Why this tool: a different company's model, run on the identical refined prompt, to see what changes when only the tool changes
-- Prompt (verbatim): the full text of `02-direction/refined-prompt.md`, unchanged
+- Prompt (verbatim): the full text of `02-direction/refined-prompt.md`, unchanged. The résumé PDF was not attached, which the prompt assumes — that turned into the most useful finding of the comparison rather than a wasted run.
 - What it produced: a design brief, a four-file tree, complete code for `index.html`, `style.css`, `script.js` and `favicon.svg`, ten [TODO] items and a three-point self-critique. Saved in `03-comparisons/gemini/output.md`.
 - What I kept, changed or rejected: kept its "Skills proved" label above each case file's tag row and added it to the site. Parked its `?source=nfc` quick-connect idea. Rejected the résumé modal, the four-colour badge system, the CDN-hosted fonts and its second layer of section IDs. Full write-up in `03-comparisons/comparison.md`.

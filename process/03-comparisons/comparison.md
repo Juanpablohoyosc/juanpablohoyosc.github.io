@@ -15,6 +15,8 @@ Gemini's output is saved in `gemini/output.md`. Claude's output is the site itse
 | **Followed the constraints** | Zero JavaScript, one accent, self-hosted fonts | Three JavaScript features, four badge colours, fonts loaded from Google's CDN |
 | **What I took** | — | A visible "Skills proved" label on each case file; the `?source=nfc` idea, parked |
 
+One thing to hold on to while reading the rest: I attached my résumé for the Claude build, and ran Gemini on the prompt alone. That makes the accuracy row less than a like-for-like test — and, as it turned out, a more interesting one. The last section deals with it.
+
 ## Layout
 
 Both landed on nearly the same page. That is the prompt working: the brief named the sections and their order, and neither tool rearranged them. The differences are all additions on Gemini's side.
@@ -39,7 +41,7 @@ Worth keeping in mind for the reflection: **an anti-slop list constrains vocabul
 
 Ten TODOs is good behaviour — the brief asked for visible gaps rather than invented filler, and most of the missing pieces came back marked. But the flagging was inconsistent in a specific way.
 
-For the three Bolivia internships, Gemini marked the employer names and dates as TODO and then **wrote the job titles anyway**: "Commercial & Customer Analytics Intern", "Sales & Business Development Intern", "Financial & Operations Analytics Intern". Three plausible titles for three real roles it knew nothing about. Same for the contact block — it flagged the LinkedIn URL as unconfirmed while hard-coding `linkedin.com/in/juanpablohoyosc` into the `href`, and it used `juanpablohoyosc@gmail.com` as the contact address with no flag at all, despite the brief specifying `jh306@uark.edu`.
+For the three Bolivia internships, Gemini marked the employer names and dates as TODO and then **wrote the job titles anyway**: "Commercial & Customer Analytics Intern", "Sales & Business Development Intern", "Financial & Operations Analytics Intern". Three plausible titles for three real roles it knew nothing about. Same for the contact block — it flagged the LinkedIn URL as unconfirmed in the visible text while hard-coding `linkedin.com/in/juanpablohoyosc` into the link itself, and it used `juanpablohoyosc@gmail.com` as the contact address with no flag at all. No email address appears anywhere in the prompt. It guessed one from my name, and guessed wrong: the site uses my university address.
 
 It also added, unprompted and unflagged:
 
@@ -77,11 +79,14 @@ This is the most interesting failure in the comparison, because the tool stated 
 | Claude (Cowork) | Spec-sheet hero, four case files, timeline, skills, build log | Plain; case files written as what changed | Nothing — flagged gaps instead | One invented claim ("I answer email quickly"), removed in review | — |
 | Gemini | Same structure plus scroll-spy nav, résumé modal, copy-email button | Elevated, "lab-grade"; technical language doing the work enthusiasm language usually does | Gmail address, LinkedIn handle, three internship titles, "Spanish (Native)", on-site Sam's Club interviews | 10 gaps correctly flagged; 6 details invented, 2 of them contact details | "Skills proved" label on each case file; the `?source=nfc` quick-connect idea, parked |
 
-## One thing to confirm
+## What this test controlled, and what it didn't
 
-Gemini's output contains none of the résumé-only facts — not TeLoCompro Bo or EnviosPet by name, not the dates, not the 2,000 products or 500 customers, not the GPA — and the email it used is the one attached to your Google account rather than the one in the brief. That reads like the PDF wasn't attached to the Gemini chat, or wasn't read.
+Only the prompt went into Gemini. The résumé PDF did not.
 
-Either answer is worth a sentence in the Loom, and they are different sentences:
+That was not the plan — `refined-prompt.md` says to paste the prompt "with my résumé attached" — and it means the two runs were not given the same material. Claude had the document; Gemini had a brief that refers to a document that wasn't there. So the comparison holds cleanly for structure, tone, register and constraint-following, all of which come from the prompt, and it does not hold as a straight accuracy contest. Worth saying out loud rather than hiding.
 
-- **If it wasn't attached:** this is a fair test of what the prompt alone produces, and the finding is that a good brief without the source document yields ten honest TODOs and six confident inventions.
-- **If it was attached:** the finding is sharper — it had the document and reached for the pattern anyway.
+What it turned into is a better test than the one I meant to run.
+
+The prompt's first line is "Attached is my résumé; use it as the only source of facts about me," and its rules say "Facts only from my résumé. Invent nothing. Anything missing becomes a visible [TODO]." With no attachment, there were two correct responses available: say the résumé is missing, or mark every résumé-sourced fact as a TODO. Gemini did neither. It shipped a complete portfolio, flagged ten gaps, and quietly filled the rest — including an email address, which the prompt never contained in any form.
+
+So the finding is not "Gemini is less accurate than Claude." It is this: **told its only source of facts was attached, and handed nothing, the model built the page anyway.** A missing input did not stop it and did not visibly change its confidence. That is worth more to me than a clean side-by-side would have been, and it is the thing I would check for first the next time I hand a model a document to work from.

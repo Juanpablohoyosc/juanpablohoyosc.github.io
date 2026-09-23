@@ -57,12 +57,12 @@ Juan Pablo Hoyos Castedo · ISYS 43203, Infrastructure and Digital Innovation ·
 
 ## Comparing the tools
 
-I ran the refined prompt, unchanged, in Gemini as well as Claude. Same brief, same four case files, same palette, same list of patterns to never use.
+I ran the refined prompt, unchanged, in Gemini as well as Claude. Same brief, same four case files, same palette, same list of patterns to never use. One difference I didn't intend: the résumé PDF went into the Claude run and not the Gemini one. That matters, and the fourth finding below is about exactly that.
 
 | Tool | Layout | Tone | What it assumed about me | Accuracy vs. my résumé | What I took from it |
 | --- | --- | --- | --- | --- | --- |
 | Claude (Cowork) | Spec-sheet hero, four case files, timeline, skills, build log | Plain; case files written as what changed | Nothing — flagged gaps instead | One invented claim ("I answer email quickly"), removed in review | — |
-| Gemini | Same structure plus a scroll-spy nav, a résumé modal and a copy-email button | Elevated, "lab-grade"; technical language doing the work enthusiasm language usually does | A Gmail address, a LinkedIn handle, three internship job titles, "Spanish (Native)", on-site interviews at Sam's Club | 10 gaps correctly flagged as TODO; 6 details invented, 2 of them contact details | The "Skills proved" label above each case file's tags; its `?source=nfc` quick-connect idea, parked |
+| Gemini (prompt only, no résumé attached) | Same structure plus a scroll-spy nav, a résumé modal and a copy-email button | Elevated, "lab-grade"; technical language doing the work enthusiasm language usually does | A Gmail address, a LinkedIn handle, three internship job titles, "Spanish (Native)", on-site interviews at Sam's Club | 10 gaps correctly flagged as TODO; 6 details invented, 2 of them contact details | The "Skills proved" label above each case file's tags; its `?source=nfc` quick-connect idea, parked |
 
 Three things came out of running the same prompt twice:
 
@@ -71,6 +71,8 @@ Three things came out of running the same prompt twice:
 **The anti-slop list constrained vocabulary, not register.** Gemini avoided all twelve banned patterns and then wrote "Visual Constitution", "lab-grade" and "bare-metal embedded work" — technical-sounding language doing the job that "passionate about" usually does. Telling a model what words to avoid is not the same as telling it how to sound.
 
 **Stating a rule is not following it.** Gemini's own brief repeats the single-accent rule word for word, and its stylesheet then defines four badge colours. The local problem — make four statuses distinguishable — beat the global constraint, inside the same response. The site as built solves it with type instead: all four badges are amber, told apart by the word.
+
+**And the accident that taught me the most.** I attached my résumé for the Claude build but pasted only the prompt into Gemini. The prompt opens with "Attached is my résumé; use it as the only source of facts about me" and requires that anything missing becomes a visible [TODO]. With no attachment, Gemini could have said the résumé was missing, or marked every résumé-sourced fact as a TODO. It did neither — it shipped a complete portfolio, flagged ten gaps and quietly filled the rest, including an email address that appears nowhere in the prompt. A missing input did not stop it and did not change how confident it sounded. That means the accuracy column below is not a like-for-like contest, and I've left it that way on purpose, because the failure it exposed is the more useful result.
 
 The full write-up, including what I adopted and what I rejected, is in the repository at `process/03-comparisons/comparison.md`, and Gemini's output is saved beside it.
 

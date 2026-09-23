@@ -27,6 +27,7 @@ I would also collect evidence earlier. Three of my four case files have no image
 3. **Check the facts, every time.** The baseline invented a team for a solo project and a preference I never stated. Later, the refined build invented "I answer email quickly" on its own. Same mistake, different model, and I only caught it because I was reading for it.
 4. **Make the process the evidence.** Commits, tags, an AI log and a decision log cost almost nothing while working and are the only proof afterwards that the result came from decisions rather than luck.
 5. **Have something else review it.** The tool that wrote the site is the worst judge of it.
-6. **Run the same prompt twice, in two tools.** It's the cheapest way to see which parts of the result came from my brief and which came from the model's habits. Both tools built the same page structure, which told me the brief was doing its job. Only one of them invented an email address for me.
+6. **Run the same prompt twice, in two tools.** It's the cheapest way to see which parts of the result came from my brief and which came from the model's habits. Both tools built the same page structure, which told me the brief was doing its job.
+7. **Check that the attachment actually went through.** I pasted the prompt into Gemini without the résumé. The prompt's first line says the résumé is attached and is the only source of facts about me, and it built the site anyway — ten honest TODOs and six invented details, including an email address I've never used. A missing input didn't stop it and didn't make it sound any less sure of itself. That's the thing I'll be watching for from now on.
 
 [ME: close with one sentence about what you'll use this site for next]
