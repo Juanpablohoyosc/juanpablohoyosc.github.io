@@ -8,6 +8,7 @@ Personal portfolio and links page for Juan Pablo Hoyos Castedo, built for Module
 - `links/`: the mobile-first links page for NFC chips and QR codes (added in Phase 3)
 - `assets/`: styles, scripts, images and downloadable files
 - `process/`: the record of how the site was built with AI
+  - `00-earlier-version/`: my first attempt at the page, from September 3, kept unedited
   - `01-baseline/`: the generic page Claude made from my résumé and a one-sentence prompt
   - `02-direction/`: baseline teardown, moodboard, design directions and the refined prompt
   - `03-comparisons/`: the same refined prompt run in different AI tools, compared
