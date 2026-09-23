@@ -1,0 +1,394 @@
+/* Juan Pablo Hoyos Castedo — portfolio
+   Direction: "Case Files" (see process/02-direction/directions.md)
+   Mobile-first. Base styles are for 360–390px; wider screens are enhanced below. */
+
+/* ---------- Fonts (self-hosted: no third-party request) ---------- */
+
+@font-face {
+  font-family: "Plex Sans";
+  src: url("../fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plex Sans";
+  src: url("../fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plex Mono";
+  src: url("../fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plex Mono";
+  src: url("../fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+/* ---------- Tokens ---------- */
+
+:root {
+  --bg: #0b0d10;
+  --surface: #12161b;
+  --line: #1f262e;
+  --line-strong: #2b343e;
+  --text: #e8eaed;
+  --muted: #8b95a1;
+  --accent: #ffb000;
+
+  --sans: "Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --gutter: 20px;
+  --max: 1100px;
+  --radius: 4px;
+}
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-weight: 600; line-height: 1.15; margin: 0; letter-spacing: -0.01em; }
+p { margin: 0 0 1em; }
+ul { margin: 0; padding: 0; list-style: none; }
+img, svg { max-width: 100%; }
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(255, 176, 0, 0.35); }
+a:hover { border-bottom-color: var(--accent); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 10px 16px;
+  font-family: var(--mono);
+  font-size: 14px;
+  border: 0;
+  z-index: 10;
+}
+.skip:focus { left: 0; }
+
+.mono {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  border-bottom: 1px solid var(--line);
+  background: rgba(11, 13, 16, 0.92);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  backdrop-filter: saturate(140%) blur(6px);
+}
+
+.topbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  flex-wrap: wrap;
+  min-height: 60px;
+}
+
+.brand {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.14em;
+  color: var(--text);
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.brand:hover { color: var(--accent); }
+
+.topnav { display: flex; flex-wrap: wrap; gap: 0 18px; }
+/* On small screens the section links are just scroll shortcuts, so only the
+   résumé link stays in the bar and the page keeps its first screen. */
+@media (max-width: 639px) {
+  .topnav a:not(.topnav__cta) { display: none; }
+  .topnav__cta { color: var(--accent); }
+}
+.topnav a {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.topnav a:hover { color: var(--text); }
+
+/* ---------- Sections ---------- */
+
+main > section { padding: 56px 0; border-top: 1px solid var(--line); }
+main > section:first-child { border-top: 0; }
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.section-head h2 { font-size: 1.5rem; }
+.section-head .rule { flex: 1; height: 1px; background: var(--line); }
+
+/* ---------- Hero ---------- */
+
+.hero { padding-top: 52px; }
+.hero h1 {
+  font-size: clamp(2.3rem, 9vw, 4rem);
+  margin-bottom: 18px;
+}
+.hero .lede {
+  font-size: clamp(1.05rem, 4.2vw, 1.25rem);
+  color: var(--text);
+  max-width: 34em;
+}
+.hero .lede strong { color: var(--accent); font-weight: 600; }
+
+.spec {
+  margin: 28px 0 0;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.spec div {
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+  display: grid;
+  gap: 2px;
+}
+.spec dt { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.spec dd { margin: 0; }
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  font-family: var(--mono);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  background: var(--surface);
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+  font-weight: 500;
+}
+.btn--primary:hover { background: #ffc233; border-color: #ffc233; color: var(--bg); }
+
+/* On a phone the buttons come before the spec rows, so the first actions are
+   reachable without scrolling past four key-value pairs. */
+@media (max-width: 639px) {
+  .hero .wrap { display: flex; flex-direction: column; }
+  .hero h1 { order: 1; }
+  .hero .lede { order: 2; }
+  .cta { order: 3; margin-top: 24px; }
+  .spec { order: 4; margin-top: 28px; }
+}
+
+/* ---------- Case files ---------- */
+
+.case {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.case-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 16px;
+}
+.case-id { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; color: var(--muted); }
+.chip {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 3px 10px;
+  color: var(--muted);
+}
+.chip--live { color: var(--accent); border-color: rgba(255, 176, 0, 0.5); }
+.case-when { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-left: auto; }
+
+.case h3 { font-size: 1.3rem; margin-bottom: 4px; }
+.case .org { color: var(--muted); font-size: 0.95rem; margin-bottom: 14px; }
+
+.qa { display: grid; gap: 12px; margin-bottom: 16px; }
+.qa > div { display: grid; gap: 3px; }
+.qa dt { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.qa dd { margin: 0; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 3px 8px;
+}
+
+.evidence { display: flex; flex-wrap: wrap; gap: 16px; }
+.evidence a, .evidence span { font-family: var(--mono); font-size: 13px; }
+.evidence span { color: var(--muted); }
+
+/* ---------- Experience ---------- */
+
+.job { padding: 18px 0; border-bottom: 1px solid var(--line); }
+.job:first-child { padding-top: 0; }
+.job h3 { font-size: 1.05rem; }
+.job .org { color: var(--muted); font-size: 0.95rem; margin: 2px 0 8px; }
+.job .when { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.job ul { display: grid; gap: 6px; }
+.job li { padding-left: 16px; position: relative; }
+.job li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.65em;
+  width: 5px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* ---------- Skills ---------- */
+
+.skills { display: grid; gap: 20px; }
+.skillgroup { border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; background: var(--surface); }
+.skillgroup h3 { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 10px; }
+.skillgroup p { margin: 0 0 10px; }
+.skillgroup .proof { font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 0; }
+
+/* ---------- Build log ---------- */
+
+.steps { display: grid; gap: 16px; counter-reset: step; }
+.step { border-left: 1px solid var(--line); padding: 0 0 0 16px; }
+.step h3 { font-size: 1rem; margin-bottom: 4px; }
+.step p { margin: 0; color: var(--text); }
+.step .mono { display: block; margin-bottom: 6px; }
+
+/* ---------- Contact and footer ---------- */
+
+.contact-grid { display: grid; gap: 14px; margin-bottom: 24px; }
+.contact-grid a { font-size: 1.05rem; }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 44px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  justify-content: space-between;
+}
+footer a { color: var(--muted); border-bottom-color: var(--line-strong); }
+footer a:hover { color: var(--accent); }
+
+/* ---------- Wider screens ---------- */
+
+@media (min-width: 768px) {
+  :root { --gutter: 40px; }
+  body { font-size: 18px; }
+  main > section { padding: 72px 0; }
+  .hero { padding-top: 72px; }
+  .spec { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
+  .case { padding: 26px; }
+  .qa { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .job { display: grid; grid-template-columns: 150px 1fr; gap: 20px; }
+  .job .when { padding-top: 3px; }
+  .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1200px) {
+  :root { --gutter: 48px; }
+  .hero h1 { font-size: 4.2rem; }
+  .spec { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
+
+@media print {
+  body { background: #fff; color: #000; }
+  .topbar, .cta, .skip { display: none; }
+  a { color: #000; }
+}

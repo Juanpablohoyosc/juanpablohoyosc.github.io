@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="JPHC monogram">
+  <rect width="64" height="64" rx="10" fill="#0b0d10"/>
+  <rect x="2.5" y="2.5" width="59" height="59" rx="8" fill="none" stroke="#ffb000" stroke-width="3"/>
+  <path d="M14 16h10v22a10 10 0 0 1-10 10h-2v-7h2a3 3 0 0 0 3-3z" fill="#ffb000"/>
+  <path d="M32 16h12a11 11 0 0 1 0 22h-5v10h-7zm7 7v8h5a4 4 0 0 0 0-8z" fill="#e8eaed"/>
+</svg>
