@@ -2,6 +2,7 @@
 
 - Phase: 2 in progress. Phases 0 and 1 done, v1 of the home page built (tag `v1-first-build`).
 - Done: baseline (`01-baseline/`); Phase 1 documents (`02-direction/`: teardown, content strategy, directions, refined prompt); v1 of `index.html` with styles, self-hosted fonts, favicon, link-preview image and the résumé download; screenshots in `screenshots/`
+- The repository already existed with my September 3 page in it. That page moved to `00-earlier-version/` unedited, and the new work sits on top of its history, so the site tells the story first attempt → baseline → refined build.
 - Next: run `02-direction/refined-prompt.md` in two other tools and save the results in `03-comparisons/`; push to GitHub and turn on Pages; then the links page (Phase 3)
 - How we're working: Claude (Cowork) runs the brief and uses its best judgment through to the end, then we review everything and fix. My laptop is back, so GitHub and the Loom are unblocked.
 

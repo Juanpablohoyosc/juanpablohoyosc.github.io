@@ -2,6 +2,15 @@
 
 Every AI interaction that shaped a decision. My course asks for the tool, why I chose it, the prompt and what I did with the result.
 
+## 0. First attempt at the page
+
+- Date: September 3, 2026
+- Tool and model: Claude (chat) [TODO: confirm which model]
+- Why this tool: it was the assistant I was already using for this class
+- Prompt (verbatim): [TODO: paste the prompt I used]
+- What it produced: a one-page site built from my résumé content, uploaded to GitHub through the web interface
+- What I kept, changed or rejected: kept unedited in `00-earlier-version/` as the first point of comparison. It reads like my résumé in a browser, which is what the refined version sets out to fix.
+
 ## 1. Writing the agent brief
 
 - Date: September 22, 2026
