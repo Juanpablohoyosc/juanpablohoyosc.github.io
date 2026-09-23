@@ -1,9 +1,9 @@
 # Status
 
-- Phase: 0, Setup (done; waiting for "next")
-- Done: baseline saved in `01-baseline/`; project structure; AI log and decision log started; git history started with tag `v0-baseline`; Phase 0 questions answered (see `decision-log.md`)
-- Next: Phase 1, Direction: baseline teardown, content strategy, moodboard, three design directions, `refined-prompt.md`
-- How we're working: from my phone for now. Claude (Cowork) runs the brief and sends me the project as a zip at every checkpoint. Pushing to GitHub and recording the Loom wait for my laptop.
+- Phase: 2 in progress. Phases 0 and 1 done, v1 of the home page built (tag `v1-first-build`).
+- Done: baseline (`01-baseline/`); Phase 1 documents (`02-direction/`: teardown, content strategy, directions, refined prompt); v1 of `index.html` with styles, self-hosted fonts, favicon, link-preview image and the résumé download; screenshots in `screenshots/`
+- Next: run `02-direction/refined-prompt.md` in two other tools and save the results in `03-comparisons/`; push to GitHub and turn on Pages; then the links page (Phase 3)
+- How we're working: Claude (Cowork) runs the brief and uses its best judgment through to the end, then we review everything and fix. My laptop is back, so GitHub and the Loom are unblocked.
 
 ## Settled in Phase 0
 
