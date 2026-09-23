@@ -39,3 +39,12 @@ Every AI interaction that shaped a decision. My course asks for the tool, why I 
   > Don't ask me any questions, use your best judgment.
 - What it produced: a one-page portfolio design on a Claude Design canvas, with an accent-color tweak (https://claude.ai/artifact/GdrLC4R25DDps2U3me83y2)
 - What I kept, changed or rejected: kept unedited as the comparison artifact in `01-baseline/`
+
+## 4. Building and reviewing the site
+
+- Date: September 22–23, 2026
+- Tool and model: Claude, Cowork mode (configured model claude-opus-5)
+- Why this tool: it can write the files, run a browser against them and keep the git history, so the brief in `PROMPT.md` could be carried out end to end
+- Prompt (verbatim): "For now, I want you to keep going by just using your best judgement."
+- What it produced: the Phase 1 documents, the home page, the links page, the contact card, the QR code, the 404 page, and three review passes (recruiter skim, accessibility and performance with Lighthouse, slop audit)
+- What I kept, changed or rejected: kept the "Case Files" direction over two alternatives. From the review I applied five fixes, including removing a claim ("I answer email quickly") the build had invented, which is the same kind of mistake the baseline made.
