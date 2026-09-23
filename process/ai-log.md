@@ -48,3 +48,12 @@ Every AI interaction that shaped a decision. My course asks for the tool, why I 
 - Prompt (verbatim): "For now, I want you to keep going by just using your best judgement."
 - What it produced: the Phase 1 documents, the home page, the links page, the contact card, the QR code, the 404 page, and three review passes (recruiter skim, accessibility and performance with Lighthouse, slop audit)
 - What I kept, changed or rejected: kept the "Case Files" direction over two alternatives. From the review I applied five fixes, including removing a claim ("I answer email quickly") the build had invented, which is the same kind of mistake the baseline made.
+
+## 5. The tool comparison
+
+- Date: September 23, 2026
+- Tool and model: Gemini
+- Why this tool: a different company's model, run on the identical refined prompt, to see what changes when only the tool changes
+- Prompt (verbatim): the full text of `02-direction/refined-prompt.md`, unchanged
+- What it produced: a design brief, a four-file tree, complete code for `index.html`, `style.css`, `script.js` and `favicon.svg`, ten [TODO] items and a three-point self-critique. Saved in `03-comparisons/gemini/output.md`.
+- What I kept, changed or rejected: kept its "Skills proved" label above each case file's tag row and added it to the site. Parked its `?source=nfc` quick-connect idea. Rejected the résumé modal, the four-colour badge system, the CDN-hosted fonts and its second layer of section IDs. Full write-up in `03-comparisons/comparison.md`.

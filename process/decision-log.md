@@ -24,3 +24,11 @@ My decisions and reflections, saved word for word.
 - Where I want to work: "Northwest Arkansas, Anywhere in the US, Remote-friendly, Open to international"
 - Sam's Club "Return & Go": "Yes, as a 4th case file (Recommended)"
 - Football program's 3.27 GPA on the public site: "Show it now"
+
+## September 23, 2026: after the tool comparison
+
+- Ran the refined prompt unchanged in Gemini, so the only variable was the tool.
+- Adopted one thing from it: a "Skills proved" label above each case file's tag row.
+- Parked its `?source=nfc` quick-connect bar. Good idea, but the site stays zero-JavaScript and the links page already puts both actions on the first screen.
+- Rejected its résumé modal, its four status-badge colours, its CDN-hosted fonts and its second layer of section IDs.
+- Two fixes of my own while I was in there: the case file columns now align to the top, and the build log runs four across instead of three plus an orphan.

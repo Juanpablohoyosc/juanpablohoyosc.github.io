@@ -32,8 +32,7 @@ Juan Pablo Hoyos Castedo · ISYS 43203, Infrastructure and Digital Innovation ·
 | --- | --- | --- | --- |
 | Claude (app) | Opus 5 | The assignment's baseline step | The one-sentence baseline |
 | Claude (Cowork) | claude-opus-5 | It writes files, runs a browser against them and keeps the git history | The brief, the build, the reviews, the documentation |
-| [ME: Gemini] | [ME] | A different model on the same prompt | The tool comparison |
-| [ME: second tool] | [ME] | [ME] | The tool comparison |
+| Gemini | [ME: which model the chat was set to] | A different company's model on the identical refined prompt | The tool comparison |
 
 ## Prompts
 
@@ -58,11 +57,24 @@ Juan Pablo Hoyos Castedo · ISYS 43203, Infrastructure and Digital Innovation ·
 
 ## Comparing the tools
 
-[ME: paste the comparison here after running the refined prompt in two more tools. The prompt to use is in `process/02-direction/refined-prompt.md`, and the outputs go in `process/03-comparisons/`.]
+I ran the refined prompt, unchanged, in Gemini as well as Claude. Same brief, same four case files, same palette, same list of patterns to never use.
 
 | Tool | Layout | Tone | What it assumed about me | Accuracy vs. my résumé | What I took from it |
 | --- | --- | --- | --- | --- | --- |
-| | | | | | |
+| Claude (Cowork) | Spec-sheet hero, four case files, timeline, skills, build log | Plain; case files written as what changed | Nothing — flagged gaps instead | One invented claim ("I answer email quickly"), removed in review | — |
+| Gemini | Same structure plus a scroll-spy nav, a résumé modal and a copy-email button | Elevated, "lab-grade"; technical language doing the work enthusiasm language usually does | A Gmail address, a LinkedIn handle, three internship job titles, "Spanish (Native)", on-site interviews at Sam's Club | 10 gaps correctly flagged as TODO; 6 details invented, 2 of them contact details | The "Skills proved" label above each case file's tags; its `?source=nfc` quick-connect idea, parked |
+
+Three things came out of running the same prompt twice:
+
+**Both tools produced the same page structure.** The brief named the sections and their order, and neither rearranged them. Every difference was an addition on Gemini's side, which says the specific part of the prompt was doing its job.
+
+**The anti-slop list constrained vocabulary, not register.** Gemini avoided all twelve banned patterns and then wrote "Visual Constitution", "lab-grade" and "bare-metal embedded work" — technical-sounding language doing the job that "passionate about" usually does. Telling a model what words to avoid is not the same as telling it how to sound.
+
+**Stating a rule is not following it.** Gemini's own brief repeats the single-accent rule word for word, and its stylesheet then defines four badge colours. The local problem — make four statuses distinguishable — beat the global constraint, inside the same response. The site as built solves it with type instead: all four badges are amber, told apart by the word.
+
+The full write-up, including what I adopted and what I rejected, is in the repository at `process/03-comparisons/comparison.md`, and Gemini's output is saved beside it.
+
+[ME: upload a screenshot of the Gemini response here]
 
 ## What the baseline got wrong
 
