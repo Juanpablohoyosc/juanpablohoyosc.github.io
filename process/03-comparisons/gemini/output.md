@@ -1,6 +1,6 @@
 # Gemini — response to the refined prompt
 
-Run on September 23, 2026, with the same `02-direction/refined-prompt.md` used for the Claude build.
+Run on September 23, 2026, with the same `02-direction/refined-prompt.md` used for the Claude build. The prompt text only — the résumé PDF it refers to was not attached.
 
 What's saved here: Gemini's prose sections and its `script.js` word for word, plus the parts of its `index.html` the comparison turns on. Its `style.css` (about 700 lines) and the rest of the markup are described rather than copied; the full text stays in the Gemini chat and in my screenshots of it.
 
