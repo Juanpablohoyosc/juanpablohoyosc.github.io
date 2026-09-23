@@ -8,6 +8,8 @@ The most useful thing I did was make a bad version on purpose. The baseline, one
 
 Writing a brief before building was the turn. Audience, the role I want, four case files in priority order, and a list of things the site should never do. Naming the things to avoid mattered as much as naming what to build: gradients, skill bars, "passionate about", a page where everything is centred. Those are the tells that make a page look machine-made, and a model won't avoid them unless you say so.
 
+Running that same brief through a second tool showed me the limit of that. Gemini avoided all twelve banned patterns and still wrote like a machine — "Visual Constitution", "lab-grade", "bare-metal embedded work". A list of banned words changes the vocabulary, not the register. If I wanted plain sentences I would have had to ask for plain sentences.
+
 Keeping a version history helped more than I expected. Tagging the baseline, the first build and the post-review version meant the progress was visible instead of asserted. [ME: one line on whether that felt like overhead or not]
 
 ## What I would do differently
@@ -25,5 +27,6 @@ I would also collect evidence earlier. Three of my four case files have no image
 3. **Check the facts, every time.** The baseline invented a team for a solo project and a preference I never stated. Later, the refined build invented "I answer email quickly" on its own. Same mistake, different model, and I only caught it because I was reading for it.
 4. **Make the process the evidence.** Commits, tags, an AI log and a decision log cost almost nothing while working and are the only proof afterwards that the result came from decisions rather than luck.
 5. **Have something else review it.** The tool that wrote the site is the worst judge of it.
+6. **Run the same prompt twice, in two tools.** It's the cheapest way to see which parts of the result came from my brief and which came from the model's habits. Both tools built the same page structure, which told me the brief was doing its job. Only one of them invented an email address for me.
 
 [ME: close with one sentence about what you'll use this site for next]

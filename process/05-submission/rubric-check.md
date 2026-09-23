@@ -4,11 +4,11 @@ Honest read of where the submission stands today, September 23, 2026.
 
 ## 1. Process and AI usage — 20 points
 
-**Evidence:** `00-earlier-version/` (Sep 3), `01-baseline/` with the prompt screenshot and notes, `02-direction/` (teardown, content strategy, three directions, refined prompt with a baseline-versus-refined table), `04-feedback/reviews.md`, `ai-log.md`, `decision-log.md`, and four tagged versions in git.
+**Evidence:** `00-earlier-version/` (Sep 3), `01-baseline/` with the prompt screenshot and notes, `02-direction/` (teardown, content strategy, three directions, refined prompt with a baseline-versus-refined table), `03-comparisons/` (Gemini's output on the identical prompt, and the write-up), `04-feedback/reviews.md`, `ai-log.md`, `decision-log.md`, and tagged versions in git.
 
-**Self-score: 18–20 if the tool comparison is done, 15–16 without it.** Progression from a bare prompt to a refined brief is documented three times over, and AI was used for review, not just generation. The one thing the rubric names that isn't finished is comparing outputs from multiple tools on the same prompt.
+**Self-score: 18–20.** Progression from a bare prompt to a refined brief is documented three times over, AI was used for review rather than just generation, and the same prompt was run in a second tool with the differences written up and one of its ideas adopted.
 
-**To close the gap:** run `02-direction/refined-prompt.md` in two more tools, save what they produce in `03-comparisons/`, and fill the comparison table in the Notion page.
+**Optional, to be safe at the top of the range:** a screenshot of the Gemini response pasted into the Notion page, so the comparison has a visible artifact and not only my description of one.
 
 ## 2. Portfolio website — 15 points
 
@@ -40,7 +40,8 @@ Honest read of where the submission stands today, September 23, 2026.
 
 ## Before submitting
 
-- [ ] Tool comparison run and written up
+- [x] Tool comparison run and written up (`03-comparisons/`, and the table is in the Notion draft)
+- [ ] Screenshot of the Gemini response added to the Notion page
 - [ ] Loom recorded, and the link set to "anyone with the link"
 - [ ] Reflection finished in your own words
 - [ ] Notion page filled in, published, and opened once in a logged-out window to confirm it's visible

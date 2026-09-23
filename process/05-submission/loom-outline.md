@@ -1,6 +1,6 @@
 # Loom outline
 
-Target 8 minutes. The assignment asks for 5–10. There's a clean split at 4:30 in case my Loom plan caps recordings at 5 minutes; if it does, record part 1 and part 2 and put both links in Notion.
+Target 9 to 9 and a half minutes. The assignment asks for 5–10. There's a clean split at 4:30 in case my Loom plan caps recordings at 5 minutes; if it does, record part 1 and part 2 and put both links in Notion.
 
 Have these open in tabs before you start:
 1. `https://juanpablohoyosc.github.io/process/00-earlier-version/` — the September 3 page
@@ -9,6 +9,7 @@ Have these open in tabs before you start:
 4. `https://juanpablohoyosc.github.io/links/` — the links page (also open it on your phone)
 5. The repository, on the commit history page
 6. `process/02-direction/refined-prompt.md` on GitHub
+7. The Gemini chat with its response to that same prompt
 
 ---
 
@@ -42,14 +43,18 @@ Say: the direction is "case files," each with a status so it's obvious what ship
 Screen: your phone, the links page. Tap through one link.
 Say: six actions, all reachable without scrolling, sized for a thumb. This is what an NFC chip or a QR code at a career fair points to.
 
-**7:00 — Proof of process (45s)**
+**7:00 — The same prompt, a second tool (1m)**
+Screen: the Gemini response, side by side with the site if you can.
+Say: you ran the identical refined prompt in Gemini. Three beats, in this order — both tools built the same page structure, which told you the brief was carrying the result rather than the model; Gemini avoided every banned pattern and still wrote "Visual Constitution" and "lab-grade", so the list changes the vocabulary and not the register; and it invented a Gmail address, a LinkedIn handle and three job titles while correctly flagging ten other gaps. End on the one thing you took from it: the "Skills proved" label above each case file's tags, which is on the site now.
+
+**8:00 — Proof of process (45s)**
 Screen: the commit history, then the tags.
 Say: v0 is the baseline, v1 the first build, v2 after the review round. The whole record is in the repository, including the AI log with every prompt.
 
-**7:45 — What I learned (45s)**
+**8:45 — What I learned (45s)**
 Say your reflection in your own words. Three beats: the thing that surprised you, the mistake you caught the AI making, and what you'd do differently next time.
 
-**8:30 — Close (15s)**
+**9:30 — Close (15s)**
 Screen: the site's contact section. Say the URL once and stop.
 
 ---
