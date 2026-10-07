@@ -403,3 +403,15 @@ footer a:hover { color: var(--accent); }
   .topbar, .cta, .skip { display: none; }
   a { color: #000; }
 }
+
+/* Case file with a phone-shaped screenshot beside the text */
+.shot--phone { max-width: 240px; margin: 4px 0 0; }
+@media (min-width: 768px) {
+  .case-media { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 32px; align-items: start; }
+  .case--media .qa { grid-template-columns: 1fr; }
+  .shot--phone { margin: 0; }
+}
+@media (min-width: 1200px) {
+  .case-media { grid-template-columns: minmax(0, 1fr) 240px; }
+  .case--media .qa { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
