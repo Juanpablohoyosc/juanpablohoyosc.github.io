@@ -416,3 +416,5 @@ footer a:hover { color: var(--accent); }
   .case--media .qa { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 .shot--end { margin: 16px 0 0; }
+.shot a { display: block; border-bottom: 0; }
+.shot a:focus-visible { outline-offset: -2px; }
