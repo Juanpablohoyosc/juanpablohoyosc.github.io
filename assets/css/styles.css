@@ -415,3 +415,4 @@ footer a:hover { color: var(--accent); }
   .case-media { grid-template-columns: minmax(0, 1fr) 240px; }
   .case--media .qa { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
+.shot--end { margin: 16px 0 0; }
