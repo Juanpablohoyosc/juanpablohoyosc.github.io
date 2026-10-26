@@ -417,7 +417,7 @@ footer a:hover { color: var(--accent); }
   :root { --gutter: 40px; }
   main > section { padding: 72px 0; }
   .hero { padding: 72px 0 80px; }
-  .spec { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 32px; }
+  .spec { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
   .qa { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
   .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 32px; }
   .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 24px; }

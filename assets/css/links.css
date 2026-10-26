@@ -34,14 +34,6 @@
 
 .card .role {
   color: var(--text);
-  margin: 0 0 6px;
-}
-
-.card .status {
-  font-family: var(--sans);
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--accent);
   margin: 0 0 22px;
 }
 
